@@ -65,7 +65,7 @@ aws ec2 describe-instances --filters "Name=tag:Name,Values=webserver" "Name=inst
 # Probar el servidor web
 curl http://$(terraform output -raw Webserver-Public-IP)
 
-Variables de Configuración
+  # Variables de Configuración
 
   Backend de Estado (bootstrap/variables.tf)
   
@@ -73,7 +73,7 @@ Variables de Configuración
   
   dynamo_db_table_name: Nombre de la tabla de DynamoDB para bloqueo del estado.
   
-  Infraestructura (infrastructure/variables.tf)
+  # Variables en Infraestructura (infrastructure/variables.tf)
   
   aws_region: Región de AWS para la implementación.
   
@@ -85,17 +85,17 @@ Variables de Configuración
   
   ami_id: ID de la AMI para el servidor web.
   
-  Estructura del Proyecto
+  # Estructura del Proyecto
   
   Componentes de la Infraestructura
   
-  bootstrap/
+  ## bootstrap/
   
   main.tf: Crea el bucket de S3 y la tabla de DynamoDB para la gestión del estado.
   
   variables.tf: Variables de configuración del backend de estado.
   
-  infrastructure/
+  ## infrastructure/
   
   backend.tf: Configuración del backend de Terraform.
   
