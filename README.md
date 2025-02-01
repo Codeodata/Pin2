@@ -16,12 +16,12 @@ Guía de Configuración
 
 # Inicialización del Backend de Estado
 
-cd bootstrap
-terraform init
-terraform plan
-terraform apply
+* cd bootstrap
+* terraform init
+* terraform plan
+* terraform apply
 
-Esto crea:
+#### Esto crea:
 
 Un bucket de S3 para almacenar el estado de Terraform.
 
@@ -35,14 +35,14 @@ La infraestructura se implementa automáticamente mediante GitHub Actions. En ca
 
 * Validación de la configuración.
 
-*Aplicación de los cambios.
+* Aplicación de los cambios.
 
-Para una implementación manual:
+#### Para una implementación manual:
 
-  cd infrastructure
-  terraform init
-  terraform plan
-  terraform apply
+  * cd infrastructure
+  * terraform init
+  * terraform plan
+  * terraform apply
 
 # Verificación de Recursos
 
