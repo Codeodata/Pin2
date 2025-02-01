@@ -1,8 +1,8 @@
-Introducción
+# Introducción
 
 Este proyecto automatiza la implementación de una infraestructura de servidor web en AWS utilizando Terraform. Incluye un proceso de inicialización para la gestión del estado de Terraform y la implementación principal de la infraestructura para un servidor web Apache básico.
 
-Características principales:
+# Características principales:
 
 Implementación automatizada de infraestructura.
 
