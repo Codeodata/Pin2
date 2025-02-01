@@ -107,12 +107,12 @@ Variables de Configuración
   
   variables.tf: Variables de configuración de la infraestructura.
 
-CI/CD
+  # CI/CD
 
-.github/workflows/
-
-TerraformApply.yml: Workflow para la implementación automática.
-
-TerraformDestroy.yml: Workflow para la eliminación de la infraestructura.
+  .github/workflows/
+  
+  TerraformApply.yml: Workflow para la implementación automática.
+  
+  TerraformDestroy.yml: Workflow para la eliminación de la infraestructura.
 
 
