@@ -13,6 +13,11 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
+    - name: Instalar dependencias
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y wget unzip
+
     - name: Install Terraform
       env:
         TERRAFORM_VERSION: "1.10.0"
@@ -21,6 +26,10 @@ jobs:
         wget https://releases.hashicorp.com/terraform/"$tf_version"/terraform_"$tf_version"_linux_amd64.zip
         unzip terraform_"$tf_version"_linux_amd64.zip
         sudo mv terraform /usr/local/bin/
+        sudo chmod +x /usr/local/bin/terraform
+
+    - name: Verificar instalación de Terraform
+      run: terraform --version
 
     - name: Terraform init
       env:
