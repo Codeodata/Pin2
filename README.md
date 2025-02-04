@@ -49,18 +49,18 @@ Aplicación de los cambios
 # 🔹 Verificación del Backend de Estado
 
 ## Verificar el bucket de S3
-aws s3 ls | grep bucket-terraform-lab
+✅ aws s3 ls | grep bucket-terraform-lab
 
 ## Verificar la tabla de DynamoDB
-aws dynamodb list-tables | grep terraformstatelock
+✅ aws dynamodb list-tables | grep terraformstatelock
 
 # 🔹  Verificación de la Infraestructura
 
 ## Verificar la VPC
-aws ec2 describe-vpcs --filters "Name=tag:Name,Values=terraform-vpc"
+✅ aws ec2 describe-vpcs --filters "Name=tag:Name,Values=terraform-vpc"
 
 ## Verificar la instancia EC2
-aws ec2 describe-instances --filters "Name=tag:Name,Values=webserver" "Name=instance-state-name,Values=running"
+✅ aws ec2 describe-instances --filters "Name=tag:Name,Values=webserver" "Name=instance-state-name,Values=running"
 
 ## Probar el servidor web
-curl http://$(terraform output -raw Webserver-Public-IP)
+✅ curl http://$(terraform output -raw Webserver-Public-IP)
